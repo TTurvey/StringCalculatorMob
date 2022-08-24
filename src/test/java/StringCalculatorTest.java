@@ -1,38 +1,46 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorTest {
 
+    private StringCalculator stringCalculator;
+
+    @BeforeEach
+    void setup() {
+        stringCalculator = new StringCalculator();
+    }
+
     @Test void
     converts_string_to_integer() {
-        assertEquals(0, new StringCalculator().add(""));
+        assertEquals(0, stringCalculator.add(""));
     }
 
     @Test void
     converts_one_to_integer() {
-        assertEquals(1, new StringCalculator().add("1"));
+        assertEquals(1, stringCalculator.add("1"));
     }
     @Test void
     converts_two_to_integer() {
-        assertEquals(2, new StringCalculator().add("2"));
+        assertEquals(2, stringCalculator.add("2"));
     }
 
     @Test
     public void
     sums_two_numbers_and_converts() {
-        assertEquals(3, new StringCalculator().add("1,2"));
+        assertEquals(3, stringCalculator.add("1,2"));
     }
 
     @Test
     public void
     sums_three_numbers_and_converts() {
-        assertEquals(6, new StringCalculator().add("1,2,3"));
+        assertEquals(6, stringCalculator.add("1,2,3"));
     }
     @Test
     public void
     sums_five_numbers_and_converts() {
-        assertEquals(17, new StringCalculator().add("1,2,3,5,6"));
+        assertEquals(17, stringCalculator.add("1,2,3,5,6"));
     }
 
 }
