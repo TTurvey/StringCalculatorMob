@@ -24,4 +24,10 @@ class StringCalculatorTest {
         assertEquals(3, new StringCalculator().add("1,2"));
     }
 
+    @Test
+    public void
+    sums_an_arbitrary_amount_of_numbers_and_converts() {
+        assertEquals(6, new StringCalculator().add("1,2,3"));
+    }
+
 }
