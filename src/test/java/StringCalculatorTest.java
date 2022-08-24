@@ -26,8 +26,13 @@ class StringCalculatorTest {
 
     @Test
     public void
-    sums_an_arbitrary_amount_of_numbers_and_converts() {
+    sums_three_numbers_and_converts() {
         assertEquals(6, new StringCalculator().add("1,2,3"));
+    }
+    @Test
+    public void
+    sums_five_numbers_and_converts() {
+        assertEquals(17, new StringCalculator().add("1,2,3,5,6"));
     }
 
 }
