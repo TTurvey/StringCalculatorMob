@@ -14,5 +14,9 @@ class StringCalculatorTest {
     converts_one_to_integer() {
         assertEquals(1, new StringCalculator().add("1"));
     }
+    @Test void
+    converts_two_to_integer() {
+        assertEquals(2, new StringCalculator().add("2"));
+    }
 
 }
