@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorTest {
 
-
     @Test void
     converts_string_to_integer() {
         assertEquals(0, new StringCalculator().add(""));
@@ -17,6 +16,12 @@ class StringCalculatorTest {
     @Test void
     converts_two_to_integer() {
         assertEquals(2, new StringCalculator().add("2"));
+    }
+
+    @Test
+    public void
+    sums_two_numbers_and_converts() {
+        assertEquals(3, new StringCalculator().add("1,2"));
     }
 
 }
