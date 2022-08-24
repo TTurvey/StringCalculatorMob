@@ -52,8 +52,8 @@ class StringCalculatorTest {
     @Test
     public void
     sums_2_numbers_with_custom_separator() {
-        assertEquals(6, stringCalculator.add("//;\n1;2"));
-        assertEquals(6, stringCalculator.add("//!\n1!2"));
+        assertEquals(3, stringCalculator.add("//;\n1;2"));
+        assertEquals(3, stringCalculator.add("//!\n1!2"));
     }
 
 
