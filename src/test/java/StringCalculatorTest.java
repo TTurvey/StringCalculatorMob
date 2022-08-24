@@ -43,4 +43,10 @@ class StringCalculatorTest {
         assertEquals(17, stringCalculator.add("1,2,3,5,6"));
     }
 
+    @Test
+    public void
+    sums_2_numbers_with_new_line_separator() {
+        assertEquals(6, stringCalculator.add("1\n2,3"));
+    }
+
 }
